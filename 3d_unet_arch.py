@@ -16,28 +16,27 @@ import sys
 
 !pip install pynrrd
 
-# Commented out IPython magic to ensure Python compatibility.
+
 import nrrd
 import scipy.ndimage
 import scipy.misc
 import pickle
 import random
-# %matplotlib notebook
 
-INPUT_SIZE = 120 # Input feature width/height
-OUTPUT_SIZE = 120 # Output feature width/height (as defined by model)
-INPUT_DEPTH = 12 # Input depth 
-OFF_IMAGE_FILL = 0 # What to fill an image with if padding is required to make Tensor
-OFF_LABEL_FILL = 0 # What to fill a label with if padding is required to make Tensor
-OUTPUT_CLASSES = 4 # Number of output classes in dataset
+
+INPUT_SIZE = 120 
+OUTPUT_SIZE = 120
+INPUT_DEPTH = 12 
+OFF_IMAGE_FILL = 0 
+OFF_LABEL_FILL = 0 
+OUTPUT_CLASSES = 4 
 OUTPUT_DEPTH = 12
 
-LEARNING_RATE = 0.001 # Model learning rate
-NUM_STEPS = 10000 # Number of train steps per model train
-BATCH_SIZE = 3 # Batch - VRAM limited
+LEARNING_RATE = 0.001 
+NUM_STEPS = 10000 
+BATCH_SIZE = 3 
 
-#inputs = tf.keras.layers.Input((INPUT_SIZE, OUTPUT_SIZE, INPUT_DEPTH))
-#s = tf.keras.layers.Lambda(lambda x: x / 255)(inputs)
+
 
 class UNetwork():
     
